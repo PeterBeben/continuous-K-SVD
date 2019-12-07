@@ -285,13 +285,13 @@ void ksvd_dct2D(
 					TZS += TZSs[i];
 				}
 				// This is an analog of a single SVD power
-				// iteration. Now the vector optimized to
-				// best match each residual is constrained
-				// to be a linear transformation of another
-				// vector.
-				// It can be worked out with some matrix
-				// calculus by minimizing the sum of inner
-				// products:
+				// iteration. In this case our dictionary 
+				// vector to be optimized to best match   
+				// each residual is constrained to be a 
+				// linear transformation of another vector.
+				// The iteration can be worked out with some 
+				// matrix calculus by minimizing the sum of 
+				// inner products:
 				//
 				//    Sum_i(Z_i-a_iT_iD').(Z_i-a_iT_iD')
 				//
