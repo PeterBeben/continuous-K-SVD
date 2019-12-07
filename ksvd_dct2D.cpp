@@ -50,13 +50,15 @@ void column_normalize(Ref<MatrixXf> M, Ref<VectorXf> NrmInv);
    of products of cosines of various frequencies coming from 2D
    discrete cosine transform sampled non-uniformly at given (u,v)
    coordinates associated to each signal's coordinates (samples).
-   This allows signals of varying length as well estimating values
-   of signals away from their sampled (u,v)-coordinates.
+   This allows sparse coding of continuous sampled signals or 
+   unstructured signals of variable length as values sampled at 
+   locations in a 2D plane, as well as predicting signal values 
+   away from the sampled (u,v)-locations.
 
    C.f. "Cloud Dictionary: Coding and Modeling for Point Clouds",
    https://arxiv.org/abs/1612.04956
 
-   Note: accuracy seems to drop of considerably as signals exceed
+   Note: accuracy seems to drop off considerably as signals exceed
    nfreq^2 number of samples.
 
    @param[in]  useOpenMP: Whether to parallelize using OpenMP.
