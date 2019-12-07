@@ -101,7 +101,7 @@ void OrthogonalPursuit::operator() (
 	ensure(D.rows(),D.cols(),latm);
 
 	X.setZero();
-    R = Y;    
+	R = Y;    
 
 	for(Index j = 1; j <= latm; ++j){
         // Find the next 'nearest' atom to current residual R.
