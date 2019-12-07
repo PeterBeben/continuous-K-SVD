@@ -22,8 +22,7 @@ SOURCES += \
         cosine_transform.cpp \
         ksvd.cpp \
         ksvd_dct2D.cpp \
-        main.cpp \
-        pt_to_pt_distsq.cpp
+        main.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -38,7 +37,6 @@ HEADERS += \
 	ensure_buffer_size.h \
 	ksvd.h \
 	ksvd_dct2D.h \
-	pt_to_pt_distsq.h \
 	stable.h
 
 SOURCES += \
@@ -47,8 +45,7 @@ SOURCES += \
 		cosine_transform.cpp \
 		ksvd.cpp \
 		ksvd_dct2D.cpp \
-		main.cpp \
-		pt_to_pt_distsq.cpp
+		main.cpp
 
 DISTFILES += \
 

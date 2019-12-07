@@ -7,7 +7,6 @@
 
 #include "ksvd.h"
 #include "constants.h"
-//#include "Cover_Tree.h"
 //#include <functional>
 //#include <math.h>
 //#include <vector>
