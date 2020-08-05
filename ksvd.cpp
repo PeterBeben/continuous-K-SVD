@@ -3,16 +3,17 @@
 
 
 #define EIGEN_NO_MALLOC
-//#define __DEBUG_KSVD
+//#define DEBUG_KSVD
 
 #include "ksvd.h"
 #include "constants.h"
-//#include <functional>
-//#include <math.h>
-//#include <vector>
-//#include <Eigen/Dense>
-//#include <omp.h>
 
+#include <Eigen/Dense>
+#include <functional>
+#include <math.h>
+#include <vector>
+#include <omp.h>
+#include <iostream>
 
 using std::cout;
 using std::endl;

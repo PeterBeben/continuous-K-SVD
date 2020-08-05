@@ -2,17 +2,19 @@
 //     See LICENSE included.
 
 #define EIGEN_NO_MALLOC
-//#define __DEBUG_KSVDDCT
+//#define DEBUG_KSVDDCT
 
 #include "ksvd_dct2D.h"
 #include "cosine_transform.h"
 #include "ensure_buffer_size.h"
 #include "constants.h"
 
-//#include <functional>
-//#include <math.h>
-//#include <Eigen/Dense>
-//#include <omp.h>
+#include <functional>
+#include <math.h>
+#include <iostream>
+#include <omp.h>
+#include <Eigen/Dense>
+#include <vector>
 
 
 using std::cout;
@@ -57,9 +59,6 @@ void column_normalize(Ref<MatrixXf> M, Ref<VectorXf> NrmInv);
 
    C.f. "Cloud Dictionary: Coding and Modeling for Point Clouds",
    https://arxiv.org/abs/1612.04956
-
-   Note: accuracy seems to drop off considerably as signals exceed
-   nfreq^2 number of samples.
 
    @param[in]  useOpenMP: Whether to parallelize using OpenMP.
    @param[in]  Y: array of signal vectors (possibly of variable length).
@@ -180,7 +179,7 @@ void ksvd_dct2D(
 
 	for(int iter = 1; iter <= maxIters; ++iter){
 
-#ifdef __DEBUG_KSVDDCT
+#ifdef DEBUG_KSVDDCT
 #pragma omp single
 {
 		if(iter == 1) cout << "\nAverge error (coord. diff., cosine angle, length vect. diff.)\n" ;

@@ -5,12 +5,12 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-//#include <Eigen/Dense>
-//#include <limits>
+#include <Eigen/Dense>
+#include <limits>
 
-#define __ALIGNED_MEMORY
+#define ALIGNED_MEMORY
 
-#ifdef __ALIGNED_MEMORY
+#ifdef ALIGNED_MEMORY
 const size_t ALIGNEDX = Eigen::Aligned16;
 inline size_t align_padded(size_t n) {
 	return ALIGNEDX > 0 ? ALIGNEDX*(1+((n-1)/ALIGNEDX)) : n;

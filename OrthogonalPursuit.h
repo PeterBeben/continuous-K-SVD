@@ -7,7 +7,8 @@
 
 
 #include "constants.h"
-//#include <vector>
+#include <Eigen/Dense>
+#include <vector>
 
 
 class OrthogonalPursuit

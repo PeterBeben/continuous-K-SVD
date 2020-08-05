@@ -7,12 +7,9 @@
 #define KSVD_DCT2D_H
 
 #include "constants.h"
-//#include <Eigen/Dense>
-//#include <functional>
-
-namespace std {
-template<class T> class function;
-}
+#include <Eigen/Dense>
+#include <functional>
+#include <vector>
 
 
 void ksvd_dct2D(

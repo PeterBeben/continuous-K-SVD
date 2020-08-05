@@ -9,9 +9,9 @@
 #include "constants.h"
 
 #include <math.h>
-//#include <vector>
-//#include <cmath>
-//#include <Eigen/Dense>
+#include <vector>
+#include <cmath>
+#include <Eigen/Dense>
 
 
 

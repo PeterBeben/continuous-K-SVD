@@ -1,17 +1,17 @@
 //     Copyright (C) 2019 Piotr (Peter) Beben <pdbcas@gmail.com>
 //     See LICENSE included.
 
-//#include <QCoreApplication>
-//#include <iostream>
-//#include <ctime>
-//#include <omp.h>
-//#include <Eigen/Dense>
-
 #include "MatchingPursuit.h"
 #include "OrthogonalPursuit.h"
 #include "ksvd.h"
 #include "ksvd_dct2D.h"
 #include "cosine_transform.h"
+
+#include <Eigen/Dense>
+#include <QCoreApplication>
+#include <iostream>
+#include <ctime>
+#include <omp.h>
 
 using std::cout;
 using std::endl;

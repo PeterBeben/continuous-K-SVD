@@ -6,9 +6,8 @@
 #define COSINETRANSFORM_H
 
 #include "constants.h"
-//#include <Eigen/Dense>
-
-extern const size_t ALIGNEDX;
+#include <Eigen/Dense>
+#include <vector>
 
 void cosine_transform(
 		const Eigen::VectorXf& U,

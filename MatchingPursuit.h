@@ -7,6 +7,7 @@
 #define MATCHINGPURSUIT_H
 
 #include "constants.h"
+#include <Eigen/Dense>
 
 class MatchingPursuit
 {

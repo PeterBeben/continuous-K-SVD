@@ -8,6 +8,8 @@
 #include "ensure_buffer_size.h"
 #include "constants.h"
 
+#include <Eigen/Dense>
+
 //-------------------------------------------------------------------------
 void MatchingPursuit::ensure(
 		Index nd, Index na, Index lm)
