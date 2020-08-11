@@ -16,14 +16,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 PRECOMPILED_HEADER  = stable.h
 
-SOURCES += \
-        MatchingPursuit.cpp \
-        OrthogonalPursuit.cpp \
-        cosine_transform.cpp \
-        ksvd.cpp \
-        ksvd_dct2D.cpp \
-        main.cpp
-
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
@@ -40,12 +32,12 @@ HEADERS += \
 	stable.h
 
 SOURCES += \
-		MatchingPursuit.cpp \
-		OrthogonalPursuit.cpp \
-		cosine_transform.cpp \
-		ksvd.cpp \
-		ksvd_dct2D.cpp \
-		main.cpp
+        MatchingPursuit.cpp \
+        OrthogonalPursuit.cpp \
+        cosine_transform.cpp \
+        ksvd.cpp \
+        ksvd_dct2D.cpp \
+        main.cpp
 
 DISTFILES += \
 
@@ -54,4 +46,13 @@ INCLUDEPATH += $$PWD/'../../lib/eigen3'
 DEPENDPATH += $$PWD/'../../lib/eigen3'
 
 
-QMAKE_CXXFLAGS += -openmp
+msvc{
+    QMAKE_CXXFLAGS += -openmp
+}
+
+gcc{
+    QMAKE_CXXFLAGS += -fopenmp -Wno-attributes -Wno-unused-parameter
+    QMAKE_CXXFLAGS += -Wno-ignored-attributes
+    QMAKE_LFLAGS += -fopenmp
+    LIBS += -fopenmp
+}

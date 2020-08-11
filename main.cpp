@@ -175,7 +175,7 @@ void test_ksvd_dct2D()
 	print_error_dct2D(Ya, Ua, Va, D, X, nfreq);
 
 	c_start = std::clock();
-	ksvd_dct2D(useOpenMP, Ya, Ua, Va, nfreq, latm, maxiters, 0.0, mp, D, X);
+    ksvd_dct2D(useOpenMP, Ya, Ua, Va, nfreq, latm, maxiters, 0.0, mp, D, X);
 	c_end = std::clock();
 
 	cout << "\nError after " << maxiters <<" iterations: " ;
@@ -192,7 +192,7 @@ void test_ksvd_dct2D()
 	print_error_dct2D(Ya, Ua, Va, D, X, nfreq);
 
 	c_start = std::clock();
-	ksvd_dct2D(useOpenMP, Ya, Ua, Va, nfreq, latm, maxiters, 0.0, op, D, X);
+    ksvd_dct2D(useOpenMP, Ya, Ua, Va, nfreq, latm, maxiters, 0.0, op, D, X);
 	c_end = std::clock();
 
 	cout << "\nError after " << maxiters <<" iterations: " ;

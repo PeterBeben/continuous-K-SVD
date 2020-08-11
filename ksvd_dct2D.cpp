@@ -148,7 +148,7 @@ void ksvd_dct2D(
 	vector<VectorXf> TZSs(maxThreads,VectorXf(nfreqsq));
 	vector<MatrixXf> TTSs(maxThreads,MatrixXf(nfreqsq,nfreqsq));
 
-	Eigen::LDLT<MatrixXf> *ldlt = new LDLT<MatrixXf>(nfreqsq*nfreqsq);
+    Eigen::LDLT<MatrixXf> *ldlt = new LDLT<MatrixXf>();
 
 
 #pragma omp parallel if(useOpenMP) default(shared) firstprivate(sparseFunct)
